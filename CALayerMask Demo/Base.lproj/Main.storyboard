@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CALayerMask_Demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Button Blue Background" translatesAutoresizingMaskIntoConstraints="NO" id="aHj-eO-1Ge">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y2x-A5-n6p">
+                                <rect key="frame" x="96.5" y="40" width="182" height="182"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="y2x-A5-n6p" secondAttribute="height" id="Gtt-Ba-ZB2"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="Tile Floor"/>
+                                <connections>
+                                    <action selector="upButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GWk-R6-sCR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eBU-xF-jwT">
+                                <rect key="frame" x="96.5" y="465" width="182" height="182"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="eBU-xF-jwT" secondAttribute="height" id="dSt-Ww-gcx"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="Wood Table"/>
+                                <connections>
+                                    <action selector="downButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="giK-YE-dl3"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="aHj-eO-1Ge" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="AWY-mB-hWw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="eBU-xF-jwT" secondAttribute="bottom" constant="20" id="Hs4-Zy-Lgu"/>
+                            <constraint firstItem="eBU-xF-jwT" firstAttribute="height" secondItem="aHj-eO-1Ge" secondAttribute="height" multiplier="3:11" id="L2N-Th-SyW"/>
+                            <constraint firstItem="y2x-A5-n6p" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WMB-q3-Mlx"/>
+                            <constraint firstAttribute="trailing" secondItem="aHj-eO-1Ge" secondAttribute="trailing" id="dYb-bd-1Ab"/>
+                            <constraint firstItem="y2x-A5-n6p" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="i8D-Jt-uAU"/>
+                            <constraint firstItem="eBU-xF-jwT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mrv-Gy-Y3n"/>
+                            <constraint firstItem="y2x-A5-n6p" firstAttribute="height" secondItem="aHj-eO-1Ge" secondAttribute="height" multiplier="3:11" id="rpE-IM-DKh"/>
+                            <constraint firstAttribute="bottom" secondItem="aHj-eO-1Ge" secondAttribute="bottom" id="v7b-Q1-dMo"/>
+                            <constraint firstItem="aHj-eO-1Ge" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="wRW-aS-hcW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="downButton" destination="eBU-xF-jwT" id="uHk-ad-RYW"/>
+                        <outlet property="upButton" destination="y2x-A5-n6p" id="dvt-eL-lcr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53.600000000000001" y="26.53673163418291"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Button Blue Background" width="100" height="100"/>
+        <image name="Tile Floor" width="100" height="100"/>
+        <image name="Wood Table" width="100" height="100"/>
+    </resources>
+</document>
